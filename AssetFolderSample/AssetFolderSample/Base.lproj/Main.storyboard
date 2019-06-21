@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AssetFolderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forest/bird" translatesAutoresizingMaskIntoConstraints="NO" id="1mE-eo-N5x">
+                                <rect key="frame" x="16" y="257" width="382" height="382.00000000000011"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1mE-eo-N5x" secondAttribute="height" multiplier="1:1" id="SI9-1U-NPE"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X3s-tj-peI">
+                                <rect key="frame" x="107" y="213" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="em2-zL-Cq0"/>
+                                    <constraint firstAttribute="height" constant="28" id="esi-wa-OTV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Forest"/>
+                                    <segment title="Sea"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="xWH-Md-tjr"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Ma-Cd-ZsG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1mE-eo-N5x" secondAttribute="trailing" constant="16" id="5Bl-4t-u7o"/>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Il-No-po3"/>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="EP1-XL-i3d"/>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RbY-Zh-c7A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1mE-eo-N5x" secondAttribute="bottom" constant="64" id="Zg5-gA-yie"/>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="top" secondItem="X3s-tj-peI" secondAttribute="bottom" constant="16" id="bPB-hX-ULS"/>
+                            <constraint firstItem="X3s-tj-peI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bip-Az-qK4"/>
+                            <constraint firstItem="1mE-eo-N5x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gZe-z0-TnU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="1mE-eo-N5x" id="kUm-14-Qob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="forest/bird" width="640" height="426.5"/>
+    </resources>
+</document>
